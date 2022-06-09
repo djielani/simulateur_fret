@@ -1,0 +1,26 @@
+
+<!-- <div class="dropdown">
+                                                        <span class="input-group-text" id="basic-addon2"><button onclick="myFunction()"
+                                                        class=" btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                                        data-bs-toggle="dropdown" aria-expanded="false"></button></span>
+                                                    
+                                                    <div id="myDropdownmenu" class="dropdown-content">
+                                                        <input type="text" placeholder="Entrer le pays de destination"
+                                                            id="myInput" onkeyup="filterFunction()" class="sticky-top">
+                                                        <a class="dropdown-item" href="#">Argentina</a>
+                                                        <a class="dropdown-item" href="#">Afganistan</a>
+                                                        <a class="dropdown-item" href="#">Brazil</a>
+                                                        <a class="dropdown-item" href="#">Sri Lanka</a>
+                                                        <a class="dropdown-item" href="#">Nepal</a>
+                                                        <a class="dropdown-item" href="#">India</a>
+                                                        <a class="dropdown-item" href="#">Japan</a>
+                                                        <a class="dropdown-item" href="#">Germany</a>
+                                                        <a class="dropdown-item" href="#">Switzerland</a>
+                                                        <a class="dropdown-item" href="#">Greece</a>
+                                                        <a class="dropdown-item" href="#">South Africa</a>
+                                                        <a class="dropdown-item" href="#">France</a>
+                                                        <a class="dropdown-item" href="#">Russia</a>
+                                                        <hr class="dropdown-divider">
+                                                        <a class="dropdown-item" href="#">Others</a>
+                                                    </div>
+                                                </div> -->
