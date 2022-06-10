@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-8">
                 <div class="container">
-                    <select class="form-control selectpicker" data-live-search="true" required name="destination">
+                    <select class="form-control selectpicker border border-dark" data-live-search="true" required name="destination">
                         <option value="">Choisissez la destination</option>
                         <?php
                             $sql0 = "SELECT DISTINCT pays FROM Aeroports";
@@ -22,6 +22,14 @@
                         ?>
                     </select>
                 </div>
+            </div>
+            <div class="col-4">
+            <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-arrow-left-circle"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-arrow-right-circle"></i></a></li>
+                        </ul>
+                    </nav>
             </div>
         </div>
     </div>
