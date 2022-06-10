@@ -1,38 +1,37 @@
-<!doctype html>
-<html lang="en">
+<?php
+    include 'db.php';
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
     
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-    <title>Hello, world!</title>
-</head>
+    $sql = "SELECT * FROM Aeroports";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+?>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <form class="col-md-4">
-                <select class="form-control selectpicker" data-live-search="true" >
-                    <option>Select</option>
-                    <option>Car</option>
-                    <option>Bike</option>
-                    <option>Scooter</option>
-                    <option>Cycle</option>
-                    <option>Horse</option>
-                </select>
-            </form>
-        </div>
-    </div>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    
-</body>
+<select name="select_box" class="form-select" id="select_box">
+    <option value="">Aeroport</option>
+    <?php
+    $sql0 = "SELECT DISTINCT pays FROM Aeroports";
+    $result0 = mysqli_query($conn, $sql0);
+    foreach ($result0 as $row0)
+    {
+        echo "<optgroup label='".$row0['pays']."'>";
+        $sql1 = "SELECT code, aeroport FROM Aeroports WHERE pays = '".$row0['pays']."'";
+        $result1 = mysqli_query($conn, $sql1);
+        foreach ($result1 as $row1)
+        {
+            echo "<option value='".$row1['code']."'>".$row1['aeroport']."</option>";
+        }
+        echo "</optgroup>";
+    }
+    ?>
+</select>
+<hr>
+<hr>
+<?php
+    $poids = $_POST['poids'];
+    $destination = $_POST['destination'];
+    $type = $_POST['type'];
+    $compagnie = $_POST['compagnie'];
 
-</html>
+    echo "poids: ".$poids."<br>"."destination: ".$destination."<br>"."type: ".$type."<br>"."compagnie: ".$compagnie;
+?>

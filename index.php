@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <?php include 'db.php'; ?>
     <?php include 'nav.php'; ?>
     <div class="container">
         <div class="row" id="card01">
@@ -26,29 +27,34 @@
                     <div class="card" id="card02">
                         <div class="container mt-3">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="poids-tab" data-bs-toggle="tab"
+                                <li class="nav-item me-2" role="presentation">
+                                    <button class="btn btn-outline-secondary active" id="poids-tab" data-bs-toggle="tab"
                                         data-bs-target="#poids" type="button" role="tab" aria-controls="poids"
-                                        aria-selected="true">Poids du colis (Kg)
+                                        aria-selected="true"><img src="icons/weight.png" alt="weight" width="23px"
+                                            height="23px"> Poids du colis
                                     </button>
                                 </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="destination-tab" data-bs-toggle="tab"
+                                <li class="nav-item me-2" role="presentation">
+                                    <button class="btn btn-outline-secondary" id="destination-tab" data-bs-toggle="tab"
                                         data-bs-target="#destination" type="button" role="tab"
-                                        aria-controls="destination" aria-selected="false">destination</button>
+                                        aria-controls="destination" aria-selected="false"><img
+                                            src="icons/icons8-place-marker-50.png" height="25px" width="25px">
+                                        destination</button>
+                                </li>
+                                <li class="nav-item me-2" role="presentation">
+                                    <button class="btn btn-outline-secondary" id="Type-tab" data-bs-toggle="tab"
+                                        data-bs-target="#Type" type="button" role="tab" aria-controls="Type"
+                                        aria-selected="false"><img src="icons/icons8-diversity-50.png" height="25px"
+                                            width="25px"> Categorie</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="Type-tab" data-bs-toggle="tab" data-bs-target="#Type"
-                                        type="button" role="tab" aria-controls="Type"
-                                        aria-selected="false">Type</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="Type-tab" data-bs-toggle="tab"
+                                    <button class="btn btn-outline-secondary" id="Type-tab" data-bs-toggle="tab"
                                         data-bs-target="#compagnie" type="button" role="tab" aria-controls="Type"
-                                        aria-selected="false">compagnie</button>
+                                        aria-selected="false"><img src="icons/icons8-paper-plane-50.png" width="25px"
+                                            height="25px">Compagnie</button>
                                 </li>
                             </ul>
-                            <form action="index.php" method="post" class="needs-validation" novalidate>
+                            <form action="test.php" method="post" class="needs-validation" novalidate>
                                 <div class="tab-content" id="myTabContent">
                                     <?php include 'poids.php'; ?>
                                     <?php include 'destination.php'; ?>
@@ -63,7 +69,48 @@
             <div class="col-4">
                 <div class="container">
                     <div class="card" id="card03">
-
+                        <div class="container">
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th>CGC</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>1 500 F</td>
+                                    </tr>
+                                    <tr>
+                                        <th>TX</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>15 F/Kg</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GE</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>1 260 F/Kg</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">CHC</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>15 000F</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">GT</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2 000F</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">SCC</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td>75 F/Kg</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
